@@ -1,0 +1,214 @@
+<!-- 
+  ========================================================
+  ESTRUTURA DO PORTFÓLIO - YOHANNA BISPO SILVA
+  ========================================================
+  Bem-vindo(a) ao código-fonte do meu portfólio! 
+  Construí este HTML focando em semântica, acessibilidade e organização.
+-->
+
+<!doctype html>
+<!-- Defino o idioma principal da página para ajudar leitores de tela e motores de busca (SEO) -->
+<html lang="pt-BR">
+  <head>
+    <!-- Garante que caracteres especiais e acentos do português funcionem perfeitamente -->
+    <meta charset="UTF-8" />
+    <!-- Essa tag é essencial para o design responsivo, fazendo o site se adaptar a telas de celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Perfil Profissional | Yohanna Bispo</title>
+    
+    <!-- Aqui eu conecto o meu arquivo CSS onde fiz toda a estilização futurista/neon -->
+    <link rel="stylesheet" href="estilizacao.css" />
+  </head>
+  <body>
+    <!-- 
+      BANNER COM NOME E MENU DE NAVEGAÇÃO 
+      Fica no topo da página e usa links âncora (href="#id") para rolar suavemente 
+      até as seções específicas, graças ao scroll-behavior do CSS.
+    -->
+    <div class="cabecalho-principal">
+      <div class="logo-nome">YOHANNA BISPO SILVA</div>
+      <nav class="menu-navegacao">
+        <a href="#inicio">INÍCIO</a>
+        <a href="#cursos">CURSOS</a>
+        <a href="#contato">CONTATO</a>
+      </nav>
+    </div>
+
+    <!-- 
+      O "container" centraliza todo o conteúdo do site e impede que 
+      ele estique infinitamente em monitores muito grandes (ultrawide).
+    -->
+    <div class="container">
+      
+      <!-- 
+        Links das Redes Sociais 
+        Uso target="_blank" para abrir em nova aba e rel="noopener noreferrer" 
+        por questões de segurança (boas práticas web). O atributo 'download' no currículo 
+        faz o arquivo ser baixado direto, em vez de só abrir no navegador.
+      -->
+      <header>
+       <!-- Links das Redes Sociais -->
+        <img 
+          src="LOGO YBS.jpg" 
+          alt="Logo Neon Yohanna Bispo Silva" 
+          class="foto-perfil fade-in" 
+        />
+        <nav class="redes-sociais" aria-label="Redes sociais">
+          <a
+            href="https://www.linkedin.com/in/yohannabispo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+          >LinkedIn</a>
+          <a
+            href="https://github.com/hannabx"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+          >GitHub</a>
+          <a href="YOHANNAESTAGIO.pdf" download class="btn">Currículo</a>
+        </nav>
+      </header>
+      <!-- 
+        Envolvo o conteúdo principal na tag <main> para melhorar a semântica.
+        A classe "fade-in" em cada <section> é o gatilho para a animação do meu JavaScript.
+      -->
+      <main>
+        
+        <!-- Apresentação (ALVO DO LINK "INÍCIO") -->
+        <section id="inicio" class="apresentacao fade-in">
+          <h1>
+            PERFIL PROFISSIONAL - TRANSIÇÃO DE CARREIRA PARA TECNOLOGIA DA INFORMAÇÃO
+          </h1>
+          <h2 class="destaque">Python • SQL • Análise de Dados</h2>
+          <h2>Bem-vindo ao meu perfil profissional!</h2>
+          <h3>Conheça um pouco sobre minha trajetória e habilidades.</h3>
+          
+          <!-- Dividi minha história em parágrafos curtos para facilitar a leitura -->
+          <p>
+            Sou profissional de Recursos Humanos, com experiência como Analista de Recrutamento e Seleção Pleno. Ao longo da minha trajetória, desenvolvi uma forte capacidade de organização, análise de informações, acompanhamento de indicadores e melhoria de processos.
+          </p>
+          <p>
+            Em R&S, atuei com diferentes perfis de vagas, desde posições operacionais até administrativas e gerenciais, conduzindo entrevistas, processos de contratação em massa, alinhamento de perfil com clientes e acompanhamento de resultados. Essa experiência me fez perceber o quanto gosto de trabalhar com informações, entender cenários, identificar padrões e encontrar formas mais eficientes de realizar um processo.
+          </p>
+          <p>
+            Foi a partir desse interesse que comecei minha transição de carreira para a área de Tecnologia da Informação. Atualmente, curso Análise e Desenvolvimento de Sistemas e venho direcionando meus estudos para Análise de Dados, principalmente com SQL e Python.
+          </p>
+          <p>
+            Tenho buscado desenvolver cada vez mais meus conhecimentos em programação, tratamento e análise de dados, além de explorar como a tecnologia pode ser utilizada para automatizar tarefas, solucionar problemas e transformar dados em informações úteis para o negócio.
+          </p>
+          <p>
+            Acredito que minha experiência em Recursos Humanos também seja um diferencial nessa nova etapa, pois me trouxe uma visão prática de processos, negócios e pessoas, além de uma experiência constante com análise e tomada de decisões.
+          </p>
+        </section>
+
+        <!-- Informações de contato (ALVO DO LINK "CONTATO") -->
+        <section id="contato" class="informacoes-pessoais fade-in">
+          <h2>Contato</h2>
+          <!-- Caixa com fundo destacado para isolar visualmente meus dados -->
+          <div class="info-box">
+            <p><strong>Nome:</strong> Yohanna Bispo</p>
+            <p><strong>E-mail:</strong> yohannabs15@gmail.com</p>
+            <p><strong>Telefone de Contato:</strong> (11) 97256-6472</p>
+          </div>
+        </section>
+
+        <!-- Habilidades e certificações (ALVO DO LINK "CURSOS") -->
+        <section id="cursos" class="habilidades fade-in">
+          <h2>Habilidades & Certificações</h2>
+
+          <!-- Esta div usa CSS Grid para posicionar os cards lado a lado automaticamente -->
+          <div class="cards-container">
+            
+            <!-- Uso a tag <article> para os cards, pois cada um é um bloco de informação independente -->
+            <article class="card">
+              <h3>Python & SQL</h3>
+              <img
+                src="LOGO PYTHON.png"
+                alt="Logo Python"
+                class="card-img img-python"
+              />
+              <ul>
+                <li>Cisco Networking - Python 1 - Concluído</li>
+                <li>Cisco Networking - Python 2 - Em andamento</li>
+                <li>Dados com Python e IA - DIO - Em andamento</li>
+                <li>Introdução à Programação Python - Em andamento</li>
+              </ul>
+            </article>
+            
+            <article class="card">
+              <h3>Análise de Dados</h3>
+              <img
+                src="ANALISE DE DADOS.jpg"
+                alt="Representação de Análise de Dados"
+                class="card-img img-dados"
+              />
+              <ul>
+                <li>Estudos em análise e interpretação de dados</li>
+                <li>Estruturação e organização de informações</li>
+                <li>Desenvolvimento de conhecimentos em SQL</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Excel</h3>
+              <img
+                src="LOGO EXCEL.jpg"
+                alt="Logo Excel"
+                class="card-img img-excel"
+              />
+              <ul>
+                <li>Excel Intermediário - Concluído</li>
+                <li>Utilização de planilhas para controle de informações e indicadores</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Power BI</h3>
+              <img
+                src="LOGO POWERBI.jpg"
+                alt="Logo Power BI"
+                class="card-img img-powerbi"
+              />
+              <ul>
+                <li>Estudos voltados à visualização de dados</li>
+                <li>Desenvolvimento de conhecimentos em dashboards</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- Formação Acadêmica -->
+        <section class="formacao fade-in">
+          <h2>Formação</h2>
+          <div class="info-box">
+            <h3>Superior completo em Psicologia - UNINOVE 2025</h3>
+            <h3>Cursando Análise e Desenvolvimento de Sistemas - UNINTER 2026</h3>
+            <p>
+              Graduação em andamento, com foco no desenvolvimento de conhecimentos em programação, banco de dados, tecnologia e análise de sistemas.
+            </p>
+          </div>
+        </section>
+
+        <!-- Meu principal Objetivo profissional de forma clara e direta -->
+        <section class="objetivo fade-in">
+          <h2>Objetivo Profissional</h2>
+          <div class="info-box">
+            <p>
+              Busco uma oportunidade na área de Dados, especialmente em posições de entrada como Estagiária de Dados, para aplicar meus conhecimentos em SQL e Python,
+              desenvolver minha experiência técnica e contribuir com análises que apoiem a tomada de decisões.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    
+    <!-- 
+      O script é carregado no final do <body> de propósito! 
+      Isso garante que todo o HTML/CSS carregue primeiro e o usuário veja o site mais rápido,
+      além de garantir que o JavaScript encontre os elementos do DOM para aplicar as animações.
+    -->
+    <script src="script.js"></script>
+  </body>
+</html>
